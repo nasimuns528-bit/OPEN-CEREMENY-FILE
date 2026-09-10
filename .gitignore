@@ -1,0 +1,77 @@
+# VisionTrust — .gitignore
+
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# ── Virtual environments ──────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Environment secrets — NEVER commit these ─────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.db
+*.sqlite
+*.sqlite3
+.keys/
+private_keys/
+
+# ── IDE ───────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Testing ───────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.coveragerc
+
+# ── Node / Frontend ───────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── Uploads & Data (user data — not source controlled) ──
+backend/uploads/
+uploads/
+*.csv
+*.zip
+
+# ── Model files ───────────────────────────────────────────
+*.pt
+*.onnx
+*.weights
+*.bin
+*.safetensors
+backend/models/downloaded/
+
+# ── Generated Secrets & Keys ──────────────────────────────
+*.secret
+*.sig
+secrets/
+
+# ── Docker ───────────────────────────────────────────────
+*.log
+
+# ── Alembic ───────────────────────────────────────────────
+# Keep versions/ tracked but ignore __pycache__
+backend/alembic/versions/__pycache__/
